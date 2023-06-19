@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:title="Search trips"
+        android:icon="@drawable/search_trip_menu" />
+
+    <item
+        android:id="@+id/navigation_post_trip"
+        android:title="Post a trip"
+        android:icon="@drawable/post_trip_menu" />
+
+    <item
+        android:id="@+id/navigation_message"
+        android:title="Chats"
+        android:icon="@drawable/chats_menu" />
+</menu>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/departure_autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/destination_autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/departure_autocomplete_fragment" />
+
+
+        <LinearLayout
+            android:id="@+id/llDateAndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/destination_autocomplete_fragment">
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/select_date"
+                android:background="@color/cyan"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/select_time"
+                android:background="@color/cyan"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etSeatsAvailable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/available_seats"
+            android:inputType="number"
+            android:padding="16dp"
+            app:layout_constraintEnd_toStartOf="@id/etPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llDateAndTime" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/price_per_passenger"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            app:layout_constraintStart_toEndOf="@id/etSeatsAvailable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llDateAndTime" />
+
+        <TextView
+            android:id="@+id/tvLuggageSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/luggage_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPrice" />
+
+        <Spinner
+            android:id="@+id/spLuggageSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/luggage_sizes"
+            android:spinnerMode="dropdown"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLuggageSize"
+            android:layout_marginTop="8dp"/>
+
+
+        <CheckBox
+            android:id="@+id/cbSmoking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smoking_allowed"
+            app:layout_constraintEnd_toStartOf="@id/cbPets"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spLuggageSize" />
+
+        <CheckBox
+            android:id="@+id/cbPets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pets_allowed"
+            app:layout_constraintStart_toEndOf="@id/cbSmoking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spLuggageSize" />
+
+        <EditText
+            android:id="@+id/etCarMake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/car_make"
+            android:padding="16dp"
+            app:layout_constraintEnd_toStartOf="@id/etCarModel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbSmoking" />
+
+        <EditText
+            android:id="@+id/etCarModel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/car_model"
+            android:padding="16dp"
+            app:layout_constraintStart_toEndOf="@id/etCarMake"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbPets" />
+
+        <EditText
+            android:id="@+id/etLicensePlate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/license_plate_will_not_be_publicly_displayed_for_security_reasons"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCarMake" />
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/additional_comments_optional"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLicensePlate" />
+
+        <Button
+            android:id="@+id/btnPostTrip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/post_trip"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etAdditionalComments" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_navigation2"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="0dp"
+android:layout_marginEnd="0dp"
+android:background="?android:attr/windowBackground"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintLeft_toLeftOf="parent"
+app:layout_constraintRight_toRightOf="parent"
+app:menu="@menu/bottom_navigation_menu2"
+    />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

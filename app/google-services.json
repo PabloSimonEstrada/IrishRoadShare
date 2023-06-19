@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881342804535",
+    "project_id": "irish-road-share",
+    "storage_bucket": "irish-road-share.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881342804535:android:c874229295df0109c7c5b2",
+        "android_client_info": {
+          "package_name": "com.example.irishroadshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881342804535-ru9phbf14nkpeo9d5nku4ar31gsil5ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEruLyIOoL6xJlF9A3FjCPaVDkRxPYtAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881342804535-ru9phbf14nkpeo9d5nku4ar31gsil5ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

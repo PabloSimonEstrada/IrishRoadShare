@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="luggage_sizes">
+        <item>Small luggage</item>
+        <item>Medium luggage</item>
+        <item>Large luggage</item>
+    </string-array>
+</resources>

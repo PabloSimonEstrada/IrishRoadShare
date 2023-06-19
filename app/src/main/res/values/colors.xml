@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#E9DDFF</color>
+    <color name="cyan">#15D8DF</color>
+    <color name="purple">#B94FD1</color>
+    <color name="received">#754CA3</color>
+    <color name="sent">#B5AFFF</color>
+    <color name="purple_city_name">#9504DD</color>
+    <color name="message_received">#CFA5FF</color>
+    <color name="blue">#1C0BFF</color>
+</resources>
